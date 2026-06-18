@@ -7,11 +7,11 @@ type noop = (...args: any[]) => any;
  */
 export function usePersistFn<T extends noop>(fn: T) {
   const fnRef = useRef<T>(fn);
-  (fnRef as any).current = fn;
+  fnRef.current = fn;
 
-  const persistFn = useRef<T>(null as any);
+  const persistFn = useRef<T>(null);
   if (!persistFn.current) {
-    (persistFn as any).current = function (this: unknown, ...args: any[]) {
+    persistFn.current = function (this: unknown, ...args) {
       return fnRef.current!.apply(this, args);
     } as T;
   }

@@ -1,0 +1,25 @@
+# Robots.txt for Space One Agency
+# Allow all crawlers to index the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://spaceone.manus.space/sitemap.xml
+
+# Cache settings
+Cache-Control: public, max-age=604800
