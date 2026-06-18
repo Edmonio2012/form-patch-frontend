@@ -1,0 +1,54 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How is pricing calculated?",
+      "answer": "Pricing is based on the exact features, complexity, and timeline of your project. We don't use packages — every build is scoped individually to match your business goals."
+    },
+    {
+      "id": 2,
+      "question": "Why don't you show fixed prices?",
+      "answer": "Because fixed pricing leads to inaccurate expectations. A simple landing page and a full system require completely different architecture, so pricing is calculated dynamically to reflect real work."
+    },
+    {
+      "id": 3,
+      "question": "How accurate is the estimate?",
+      "answer": "The estimate is based on real development logic and feature complexity. After reviewing your request, we may refine the scope slightly — but pricing stays close to the calculated range."
+    },
+    {
+      "id": 4,
+      "question": "How long does a project take?",
+      "answer": "Most projects are completed within 2–6 weeks. Timelines depend on scope, complexity, and urgency."
+    },
+    {
+      "id": 5,
+      "question": "Can I change things after submitting?",
+      "answer": "Yes. The initial request is a starting point. We refine the scope together before any development begins."
+    },
+    {
+      "id": 6,
+      "question": "Do you use templates?",
+      "answer": "No. Everything is built from scratch. Each project is designed and developed specifically for your business — no shortcuts, no generic layouts."
+    },
+    {
+      "id": 7,
+      "question": "What happens after I submit my request?",
+      "answer": "We review your request and get back to you within 24 hours with next steps, a refined scope, and confirmation details."
+    },
+    {
+      "id": 8,
+      "question": "Do you offer support after launch?",
+      "answer": "Yes. We can continue with updates, maintenance, and feature expansion depending on your needs."
+    },
+    {
+      "id": 9,
+      "question": "Can you integrate with other tools?",
+      "answer": "Yes. We handle integrations with APIs, payment systems, CRMs, and third-party services as required."
+    },
+    {
+      "id": 10,
+      "question": "What if I'm not sure what I need?",
+      "answer": "That's expected. You can use \"Let AI decide,\" and we'll guide you toward the most effective setup based on your goals."
+    }
+  ]
+}
