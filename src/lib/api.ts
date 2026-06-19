@@ -4,7 +4,8 @@
  * MUST match backend validation schemas exactly
  */
 
-const API_BASE = "/api";
+const API_ORIGIN = (import.meta.env.VITE_FRONTEND_FORGE_API_URL || "").replace(/\/+$/, "");
+const API_BASE = `${API_ORIGIN}/api`;
 
 // ============================================================================
 // PARSE REQUEST
@@ -58,7 +59,7 @@ export async function callParseRequest(
     return {
       success: responseData.success,
       complexity: data.complexity,
-      projectType: data.project_type,
+      projectType: data.projectType || data.project_type,
       interpretation: data.interpretation,
       validatedFeatures: data.validated_features || data.selected_features,
     };
@@ -123,7 +124,8 @@ export async function callCalculatePrice(
     const data = responseData.data || responseData;
     return {
       success: responseData.success,
-      totalPrice: data.total_price,
+      totalPrice: data.totalPrice || data.total_price,
+      priceRange: data.priceRange || data.price_range,
       message: data.message,
     };
   } catch (error) {
@@ -152,6 +154,7 @@ export interface CreateRequestPayload {
     multipliers?: Record<string, number>;
     timestamp?: string;
   };
+  sessionId?: string;
   email?: string;
   companyName?: string;
   phone?: string;
@@ -196,8 +199,8 @@ export async function callCreateRequest(
     const data = responseData.data || responseData;
     return {
       success: responseData.success,
-      requestId: data.request_id,
-      totalPrice: data.total_price,
+      requestId: data.requestId || data.request_id,
+      totalPrice: data.totalPrice || data.total_price,
       message: data.message,
     };
   } catch (error) {
