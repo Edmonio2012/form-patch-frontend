@@ -216,6 +216,7 @@ export default function PricingCalculator() {
         pricingSnapshot: {
           timestamp: new Date().toISOString(),
         },
+        sessionId,
         email: formData.email,
         companyName: formData.name,
     
